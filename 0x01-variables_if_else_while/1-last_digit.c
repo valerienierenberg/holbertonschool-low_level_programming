@@ -4,7 +4,7 @@
 
 /**
 * main- void
-* description: prints if last digit is neg, pos, or zero
+* description: prints last digit of number stored in n, with more info
 * Return: 0
 */
 
