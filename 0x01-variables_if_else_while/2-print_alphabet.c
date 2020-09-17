@@ -8,10 +8,11 @@
 
 int main(void)
 {
-for (int x = 'A'; x <= 'Z'; x++)
-{
-	putchar(tolower(x));
-}
-return (0);
+	char c;
 
+	for (c = 'a' ; c <= 'z' ; c++)
+
+	putchar(c);
+
+	return (0);
 }
