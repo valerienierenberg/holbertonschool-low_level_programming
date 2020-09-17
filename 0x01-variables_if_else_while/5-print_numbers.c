@@ -1,19 +1,18 @@
 /**
 * main- void
 * description: print num 1-10
-* Return: 0
+* Return: none
 */
 
 #include <stdio.h>
 
 int main(void)
 {
-	int a = 0
+	int a;
 
-	while (a < 10)
+	for (a = 0 ; a < 10 ; a++)
 	{
 		printf("%d\n", a);
-		a++;
 	}
 	return (0);
 }
