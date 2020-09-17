@@ -1,0 +1,23 @@
+/**
+* main- void
+* description: prints alphabet except e and q
+* Return: 0
+*/
+
+#include <stdio.h>
+
+int main(void)
+{
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c != 'e' && c != 'q')
+			puthcar(c);
+}
+
+putchar('\n');
+
+
+return (0);
+}
