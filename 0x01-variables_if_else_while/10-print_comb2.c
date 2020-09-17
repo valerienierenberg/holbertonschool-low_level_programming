@@ -7,20 +7,24 @@
 #include <stdio.h>
 
 int main(void)
-
-	int i
-
-	for (int i = 0; i < 100 ; i++)
 {
+	int a;
+	int b;
 
-	putchar((i / 10) + '0');
-}
+	for (a = 0; a < 100 ; a++)
 {
-	putchar((i % 10) + '0');
-}
-	putchar(',');
-{
-	putchar(' ');
+		for (b = 0; b < 100 ; b++)
+		{
+			putchar((a % 10) + '0');
+			putchar((b % 10) + '0');
+
+			if (a == 9 && b == 9)
+				continue;
+
+			putchar(',');
+
+			putchar(' ');
+		}
 }
 	return (0);
 }
