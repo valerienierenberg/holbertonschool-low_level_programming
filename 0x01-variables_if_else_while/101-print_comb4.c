@@ -14,15 +14,15 @@ int main(void)
 
 	for (a = 0 ; a < 10 ; a++)
 {
-		for (a = b + 1; b < 10 ; b++)
+		for (b = a + 1; b < 10 ; b++)
 		{
-			for (a = c + 1; c < 10 ; c++)
+			for (c = b + 1; c < 10 ; c++)
 		{
 				putchar((a % 10) + '0');
 				putchar((b % 10) + '0');
 				putchar((c % 10) + '0');
 
-			if (a == 8 && b == 9 && c == 9)
+			if (a == 1 && b == 0 && c == 2)
 				continue;
 
 			putchar(',');
