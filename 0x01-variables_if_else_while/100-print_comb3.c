@@ -1,6 +1,6 @@
 /**
 * main- void
-* description- prints combos of two digits, not repeating digit combos
+* description: prints 00 to 99
 * Return: 0
 */
 
@@ -11,22 +11,28 @@ int main(void)
 	int a;
 	int b;
 
-	for (a = 0 ; a < 9 ; a++)
-{
-		for (a = b + 1; b < 10 ; b++)
+	for (a = '0'; a <= '9'; a++)
+	{
+		for (b = '0'; b <= '9'; b++)
 		{
-			putchar((a % 10) + '0');
-			putchar((b % 10) + '0');
 
-			if (a == 8 && b == 9)
+			if (a == '8' && b == '9')
 				continue;
 
-			putchar(',');
+			if (a == b)
+				break;
 
-			putchar(' ');
+				{
+				putchar(a);
+				putchar(b);
+				putchar(',');
+				putchar(' ');
+				}
 		}
-}
+	}
+
 		putchar('\n');
 
-		return (0);
+return (0);
 }
+
