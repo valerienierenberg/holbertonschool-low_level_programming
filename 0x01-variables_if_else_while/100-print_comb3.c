@@ -1,6 +1,6 @@
 /**
 * main- void
-* description: prints 00 to 99
+* description: prints 00 to 99, two digit combos
 * Return: 0
 */
 
