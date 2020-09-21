@@ -1,3 +1,9 @@
+/**
+* main- void
+* description: prints Holberton
+* Return: 0
+*/
+
 #include "holberton.h"
 
 int main(void)
@@ -11,7 +17,7 @@ int main(void)
 	{
 	_putchar(b[c]);
 	}
-	
+
 	_putchar('\n');
 
 
