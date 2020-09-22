@@ -1,6 +1,6 @@
 /**
 * _isalpha- checks for alphabetic characters
-* description: alpha characters
+* @c: alpha characters
 * Return: 1 if a letter, 0 otherwise
 */
 
