@@ -1,26 +1,26 @@
 /**
-* print_times_table- prints 9 times table
+* print_times_table- prints n times table
 * @int: prints 9 times table
 * return: void
 */
 
 #include "holberton.h"
 
-void print_times_table(int)
+void print_times_table(int n)
 {
-	int i, j, k;
+    int j, k;
 
-	for (i = 0; i <= 9; i++)
+	for (n = 0; n <= 15; n++)
 	{
 		_putchar('0');
 
-		for (j = 1; j <= 9; j++)
+		for (j = 1; j <= 15; j++)
 		{
 
 			_putchar(',');
 			_putchar(' ');
 
-			k = i * j;
+			k = n * j;
 
 			if (k <= 9)
 				_putchar(' ');
