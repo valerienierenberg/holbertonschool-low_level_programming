@@ -1,6 +1,6 @@
 /**
 * jack_bauer- prints every minute of day
-* description: prints the time every minute of day
+* @void
 * Return: void
 */
 
