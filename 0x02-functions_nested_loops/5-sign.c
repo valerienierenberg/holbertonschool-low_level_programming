@@ -1,6 +1,6 @@
 /**
 * print_sign- prints the sign of a number
-* description: alpha characters
+* @n: number
 * Return: 0, 1, or -1
 */
 
