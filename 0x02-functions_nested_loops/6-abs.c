@@ -1,6 +1,6 @@
 /**
-* _abs- finds absolute value
-* description: prints absolute value of number
+* _abs- prints absolute value of input number
+* @c: any number
 * Return: c, -c
 */
 
