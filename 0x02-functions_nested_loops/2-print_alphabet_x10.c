@@ -1,7 +1,7 @@
 /**
 * print_alphabet_x10- void
 * description: prints alphabet ten times followed by newline
-* return: 0
+* return: void
 */
 
 #include "holberton.h"
@@ -17,7 +17,7 @@ void print_alphabet_x10(void)
 		{
 		_putchar(c);
 		}
-	
+
 	_putchar('\n');
 	}
 
