@@ -8,16 +8,16 @@
 
 int main(void)
 {
-	long int f1 = 0, f2 = 1, i, next = 0;
+	long int num1 = 0, num2 = 1, i, fib = 0;
 
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%ld, ", f2);
+		printf("%ld, ", num2);
 
-		next = f1 + f2;
+		fib = num1 + num2;
 
-		f1 = f2;
-		f2 = next;
+		num1 = num2;
+		num2 = fib;
 
 	}
 
