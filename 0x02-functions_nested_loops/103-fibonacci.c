@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-	long num1, num2, fib, sum;
+	long num1 = 1, num2 = 2, fib = 0, sum = 2;
 
-	for (num1 = 1, num2 = 2, fib = 0, sum = 2; num1 <= 4000000 && num2 <= 4000000;)
+	for (; num1 <= 4000000 && num2 <= 4000000;)
 	{
 	fib = num1 + num2;
 		if (fib % 2 == 0)
