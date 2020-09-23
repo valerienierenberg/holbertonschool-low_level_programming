@@ -1,28 +1,23 @@
 /**
-* print_fibonacci- prints fibonacci numbers
+* main- prints fibonacci numbers
 * @n: number
 * Return:0
 */
 
 #include <stdio.h>
-#include "holberton.h"
 
-int print_fibonacci(int n);
+int main(void)
 {
-	int f1 = 0, f2 = 1, i, next;
+	long int f1 = 0, f2 = 1, i, next = 0;
 
-	if (n < 1)
-
-	return;
-
-	for (i = 1; i <= n; i++)
+	for (i = 1; i <= 50; i++)
 	{
-		printf("%d", f2);
+		printf("%ld, ", f2);
 
-	next = f1 + f2;
+		next = f1 + f2;
 
-	f1 = f2;
-	f2 = next;
+		f1 = f2;
+		f2 = next;
 
 	}
 
