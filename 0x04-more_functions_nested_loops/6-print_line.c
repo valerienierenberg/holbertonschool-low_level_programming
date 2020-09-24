@@ -2,7 +2,7 @@
 * print_line- void
 * @n: number
 * description: prints a line on the terminal
-* return: void
+* return:void
 */
 
 #include "holberton.h"
