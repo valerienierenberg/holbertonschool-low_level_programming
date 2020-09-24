@@ -1,5 +1,5 @@
 /**
-* _isupper -  checks for uppercase character.
+* _isupper-  checks for uppercase character.
 * @c: letter
 *
 * Description: Returns 1 if c is uppercase, else 0
