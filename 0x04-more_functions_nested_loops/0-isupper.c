@@ -1,8 +1,8 @@
 /**
-* _isupper -  checks for lowercase character.
-* @c: lowercase a-z
+* _isupper -  checks for uppercase character.
+* @c: letter
 *
-* Description: Returns 1 if c is lowercase, else 0
+* Description: Returns 1 if c is uppercase, else 0
 * section header: Section description
 * Return: returns int
 */
