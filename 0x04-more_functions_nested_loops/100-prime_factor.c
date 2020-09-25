@@ -19,7 +19,7 @@ int main(void)
 	long int b;
 	long int c;
 
-	b = 612852475143
+	b = 612852475143;
 
 	for (a = 1; a <= b; a++)
 	{
@@ -35,6 +35,6 @@ int main(void)
 			a = 1;
 		}
 	}
-}
+
 return (0);
 }
