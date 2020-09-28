@@ -1,22 +1,20 @@
 /**
 * print_numbers -  prints nums 0-9, and newline
-* @void: number
+* 
 *
 * Description: prints 0-9, newline
 * section header: Section description
-* Return: returns int
+* Return:void
 */
 
 #include "holberton.h"
 
 void print_numbers(void)
 {
-	int i;
+	int a;
 
-	for (i = '0'; i <= '9'; i++)
-	{
-	_putchar(i);
-	}
+	for (a = '0'; a <= '9'; a++)
+		_putchar(a);
 
 _putchar('\n');
 }
