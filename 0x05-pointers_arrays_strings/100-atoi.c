@@ -11,16 +11,40 @@
 
 int _atoi(char *s)
 {
-    int digit;
-    int j = 1;
-    int m = 0;
+    int stnb;
+    int ednb;
+    int lennb;
+    int res = 0;
+    int coef = 1;
+    int i;
+    int sign = 1;
 
-    for (int i = strlen(s) -1; i >= 0; i--)
+/* Detect start number */
+    for (i = 0; !(s[i] >= '0' && s[i] <= '9') && s[i] != '\0'; i++)
+    ;
+    stnb = i;
+/* Detect end number */
+    for (; s[i] >= '0' && s[i] <= '9'; i++)
+    ;
+    ednb = i;
+/* calculate len number*/
+    lennb = ednb - stnb;
+/* Convert Number */
+    for (i = 1; i < lennb ; i++)
+        coef *= 10;
+    for (i = 0; i < lennb; i++)
     {
-        digit = s[i];
-        digit = digit - 48;
-        m = m + (digit * j);
-        j = j * 10;
+        res += (s[stnb + i] - '0') * coef;
+        coef /= 10;
     }
-    return (m);
+    for (i = 0; i < stnb; i++)
+    {
+        if (s[i] == '-')
+        {
+            sign = sign * -1;
+        }
+    }
+    if (s[stnb - 1] == '-')
+        res = res * sign;
+    return (res);
 }
