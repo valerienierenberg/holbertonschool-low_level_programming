@@ -1,25 +1,23 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <time.h>
+#include "holberton.h"
 
-int main()
+int main(void) 
 {
-    srand((unsigned int)(time(NULL)));
-    int i;
-    char pass[12];
-    char letter;
+     srand((unsigned int)(time(NULL)));
 
-    getchar();
+    int index = 0;
 
-    for (i = 0; i < 4; i++) {
-        pass[i] = rand() % 9;
-        char capLetter = 'A' + (rand() % 26);
-        pass[i + 2] = capLetter;
-        char letter = 'a' + (rand() % 26);
-        pass[i + 3] = letter;
-        printf("%d%c%c", pass[i], pass[i + 2], pass[i + 3]);
+    /*step 1*/
+    char characters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/,.-+=~`<>:";
+    /* I just added a few punctuations characters for explanatory purpose
+    /* you can add all the additional punctuations which are required
+
+    /* step 2 */
+    for(index = 0; index < 12; index++)
+    {
+        printf("%c", characters[rand() % (sizeof characters - 1)]);
     }
-    printf("\n\n");
+
 }
