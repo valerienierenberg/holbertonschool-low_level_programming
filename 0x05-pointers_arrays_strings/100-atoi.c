@@ -2,49 +2,30 @@
 #include <stdio.h>
 
 /**
-* rev_string - converts a string to an int
-* @s: string
-*
-* Description: converts string to int
-* Return: int
+* print_array - print n elements of an array of ints
+* @a : int
+* @n : int
+* Description: print n elements of an array of ints
+* Return: void
 */
 
 int _atoi(char *s)
 {
-    int stnb;
-    int ednb;
-    int lennb;
-    int res = 0;
-    int coef = 1;
+    int res;
     int i;
-    int sign = 1;
+    res = 0;
 
-/* Detect start number */
-    for (i = 0; !(s[i] >= '0' && s[i] <= '9') && s[i] != '\0'; i++)
-    ;
-    stnb = i;
-/* Detect end number */
-    for (; s[i] >= '0' && s[i] <= '9'; i++)
-    ;
-    ednb = i;
-/* calculate len number*/
-    lennb = ednb - stnb;
-/* Convert Number */
-    for (i = 1; i < lennb ; i++)
-        coef *= 10;
-    for (i = 0; i < lennb; i++)
+    for (i = 0; s[i] != '\0'; i++)
     {
-        res += (s[stnb + i] - '0') * coef;
-        coef /= 10;
-    }
-    for (i = 0; i < stnb; i++)
-    {
-        if (s[i] == '-')
+        if (i < 0)
         {
-            sign = sign * -1;
+            i *= -1;
+            _putchar('-');
         }
+
+    res = res * 10 + s[i] - '0';
     }
-    if (s[stnb - 1] == '-')
-        res = res * sign;
-    return (res);
+
+    return res;
+
 }
