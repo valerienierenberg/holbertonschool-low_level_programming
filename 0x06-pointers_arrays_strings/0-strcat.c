@@ -1,39 +1,26 @@
 #include "holberton.h"
 /**
-* *_strcat -  concatenates string
-* @dest : destination
-* @src : source
+* _strcat - appends src to the dest string
+* @dest: string to append by src
+* @src: string to append to dest
 *
-* Description: concatenates string
-* Return: void
+* Return: address of dest
 */
-
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-
-	while (s[i] != '\0')
-		i++;
-
-	return (i);
-}
-
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; src[i] != '\0'; i++)
-		dest[i] = src[i];
-
-	dest[i] = '\0';
-
-	return (dest);
-}
-
 char *_strcat(char *dest, char *src)
 {
-  _strcpy (dest + _strlen (dest), src);
-  return (dest);
+int i, j;
+
+i = 0;
+j = 0;
+
+while (*(dest + i))
+i++;
+
+while ((*(dest + i) = *(src + j)))
+{
+i++;
+j++;
+}
+
+return (dest);
 }
