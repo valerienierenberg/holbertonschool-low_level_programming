@@ -7,32 +7,20 @@
  */
 char *rot13(char *s)
 {
-if (s != '\0')
-{
-int i;
+int i, j;
+char orig[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char result[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
 for (i = 0; s[i]; i++)
 {
-if (s[i] >= 'a' && s[i] <= 'm')
-{
-s[i] += 13;
-continue;
-}
-if (s[i] >= 'A' && s[i] <= 'M')
-{
-s[i] += 13;
-continue;
-}
-if (s[i] >= 'n' && s[i] <= 'z')
-{
-s[i] -= 13;
-continue;
-}
-if (s[i] >= 'N' && s[i] <= 'Z')
-{
-s[i] -= 13;
-continue;
-}
-}
+	for (j = 0; j < 52; j++)
+	{
+		if (orig[j] == s[i])
+		{
+			s[i] = result[j];
+			break;
+		}
+	}
 }
 return (s);
 }
