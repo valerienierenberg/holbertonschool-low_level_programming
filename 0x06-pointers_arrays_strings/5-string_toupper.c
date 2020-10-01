@@ -5,7 +5,7 @@
  * @s: string
  *
  * Description: Function that reverses the content of an array of integers.
- * Return: void
+ * Return: s
  *
  */
 
