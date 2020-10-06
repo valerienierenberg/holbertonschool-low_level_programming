@@ -24,3 +24,4 @@ t2 += *((a + i * size) + j);
 }
 }
 printf("%d, %d\n", t1, t2);
+}
