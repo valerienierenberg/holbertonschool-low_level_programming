@@ -4,7 +4,7 @@
 * @s: string
 * @accept: string to compare to s and see what matches
 *
-* Return: number of bytes of s in accpet
+* Return: number of bytes of s in accept
 */
 
 unsigned int _strspn(char *s, char *accept)
