@@ -8,11 +8,11 @@
 int check_prime(int f, int i)
 {
 if (i < 2 || i % f == 0)
-    return (0);
+	return (0);
 else if (f > i / 2)
-    return (1);
+	return (1);
 else
-    return (check_prime(f + 1, i));
+	return (check_prime(f + 1, i));
 }
 
 /**
@@ -22,8 +22,9 @@ else
 */
 int is_prime_number(int n)
 {
-    /* Base case */
-    if (n == 2) 
-        return (1);
-    return (check_prime(2, n));
+/* Base case */
+if (n == 2)
+	return (1);
+	return (check_prime(2, n));
 }
+
