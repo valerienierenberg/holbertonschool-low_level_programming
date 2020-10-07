@@ -1,0 +1,2 @@
+abc123
+(setq next-line-add-newlines nil)
