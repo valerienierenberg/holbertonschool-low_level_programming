@@ -13,7 +13,12 @@ int check_sqrt(int a, int c)
 		return (-1);
 	return (check_sqrt(a + 1, c));
 }
-
+/**
+* _sqrt_recursion - returns natural square
+* root of a number (n)
+* @n: number to get square root of
+* Return: square root of n
+*/
 int _sqrt_recursion(int n)
 {
 	if (n == 0)
