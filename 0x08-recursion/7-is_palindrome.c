@@ -15,8 +15,8 @@ return (1 + _strlen(str + 1));
 /**
 * check_palindrome - checks to see if a
 * string is a palindrome
-* @l: left hand index
-* @r: right hand index
+* @left: left hand index
+* @right: right hand index
 * @p: possible palindrome
 * Return: 1 if palindrome, 0 if not
 */
@@ -38,5 +38,6 @@ return (check_palindrome(left + 1, right - 1, p));
 */
 int is_palindrome(char *s)
 {
-return (check_palindrome(0, (_strlen(s)-1), s));
+int i;
+return (check_palindrome(0, (_strlen(s) - 1), s));
 }
