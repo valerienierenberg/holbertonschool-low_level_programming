@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * _strlen - return length of string
-* @str: string to check
+* @str: string to find length of
 *
 * Return: length of str
 */
@@ -20,15 +20,15 @@ return (1 + _strlen(str + 1));
 * @p: possible palindrome
 * Return: 1 if palindrome, 0 if not
 */
-int check_palindrome(int l, int r, char *p)
+int check_palindrome(int left, int right, char *p)
 {
-if (l >= r)
+if (left >= right)
 return (1);
 
-else if (p[l] != p[r])
+else if (p[left] != p[right])
 return (0);
 else
-return (check_palindrome(l + 1, r - 1, p));
+return (check_palindrome(left + 1, right - 1, p));
 }
 /**
 * is_palindrome - checks for palindrome
@@ -38,7 +38,5 @@ return (check_palindrome(l + 1, r - 1, p));
 */
 int is_palindrome(char *s)
 {
-int i;
-i = _strlen(s) - 1;
-return (check_palindrome(0, i, s));
+return (check_palindrome(0, (_strlen(s)-1), s));
 }
