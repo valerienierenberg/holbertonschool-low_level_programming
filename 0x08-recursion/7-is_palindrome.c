@@ -39,5 +39,6 @@ return (check_palindrome(left + 1, right - 1, p));
 int is_palindrome(char *s)
 {
 int i;
-return (check_palindrome(0, (_strlen(s) - 1), s));
+i = _strlen(s) - 1;
+return (check_palindrome(0, i, s));
 }
