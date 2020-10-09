@@ -1,5 +1,12 @@
 #include <stdio.h>
-int main(int argc, char* argv[])
+/**
+* main- prints number of arguments
+* @argc: count of arguments
+* @argv: argument strings
+* description: prints number of arguments
+* Return: 0
+*/
+int main(int argc, char *argv[])
 {
 (void)argv;
 {
