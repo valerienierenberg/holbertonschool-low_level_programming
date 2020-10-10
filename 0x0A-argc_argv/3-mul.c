@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main- prints arguments
+* main- multiplies two numbers (arguments)
 * @argc: number of arguments
 * @argv: names of arguments
-* description: prints arguments
-* Return: 0
+* description: multiplies two arguments
+* Return: 1 if error, otherwise 0
 */
 int main(int argc, char *argv[])
 {
