@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int prod;
 	int num1;
 	int num2;
-/* This line is giving me segmentation fault instead of printing error */
+
 	if (argc < 3)
 		{
 		printf("Error\n");
