@@ -38,3 +38,4 @@ concat_str[concat_index++] = s2[index];
 return (concat_str);
 
 }
+
