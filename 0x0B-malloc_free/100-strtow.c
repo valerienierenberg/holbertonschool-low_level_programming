@@ -12,69 +12,44 @@
  */
 char **strtow(char *str)
 {
-char **new;
-	int wrd;
-	int sz = 0;
-	int i = 0;
-	int a = 0;
-	int b = 0;
-	int mem = 0;
-	int plc = 0;
-
-if (str == NULL || *str == '\0')
-	return (NULL);
-	/* This check for number of words, not chars */
-	while (str[sz] != '\0')
-	{
-		if (str[sz] == ' ')
-			sz++;
-		else
-		{
-			while (str[sz] != ' ' && str[sz] != '\0')
-				sz++;
-				wrd++;
-		}
-	}
-	/* sz + 1 is to accomodate for and escape char */
-	new = (char **)malloc((wrd + 1) * sizeof(char *));
-	/* this while loop gets num of chars and allocated mem */
-	while (str[a] != '\0')
-	{
-		if (str[a] == ' ')
-			a++;
-		else
-		{
-			b = 0;
-			while (str[a] != ' ' && str[a] != '\0')
-			{
-				a++;
-				b++;
-			}
-			new[mem] = malloc((b + 1) * sizeof(char));
-			mem++;
-		}
-	}
-	mem = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ' ')
-			i++;
-		else
-		{
-			plc = 0;
-			while (str[i] != ' ' && str[i] != '\0')
-			{
-				new[mem][plc] = str[i];
-				i++;
-				plc++;
-			}
-			new[mem][plc] = '\0';
-			mem++;
-		}
-	}
-	for (i = 0; new[i] != NULL; i++)
-		printf("new[i] = %p\n", new[i]);
-	new[mem] = NULL;
-	return (new);
+char **arrstr;
+int i = 0, wordstart = 0, j = 0, k = 0, c = 0;
+if (str == NULL)
+return (NULL);
+while (*str == ' ')
+str++;
+if (*str == '\0')
+return (NULL);
+while (str[i] != '\0')
+{
+if (str[i] != ' ' && str[i] != '\0')
+{
+while (str[i] != ' ' && str[i] != '\0')
+i++;
+k++;
+}
+if (str[i] != '\0')
+i++;
+}
+arrstr = malloc(sizeof(char *) * (k + 1));
+if (!arrstr)
+return (NULL);
+for (i = 0, wordstart = 0;; ++i)
+if (str[i] == ' ' || str[i] == '\0')
+{
+arrstr[j] = malloc(sizeof(char) * (i - wordstart + 1));
+if (!arrstr[j])
+return (NULL);
+for (c = wordstart, k = 0; c < i; ++c, ++k)
+arrstr[j][k] = str[c];
+arrstr[j++][k] = '\0';
+for (; str[i] == ' '; ++i)
+;
+wordstart = i;
+if (str[i] == '\0')
+break;
+}
+arrstr[j] = NULL;
+return (arrstr);
 }
 
