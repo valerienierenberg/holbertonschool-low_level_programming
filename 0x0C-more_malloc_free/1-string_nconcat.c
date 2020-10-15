@@ -18,7 +18,7 @@ int _strlen(char *s)
 }
 
 /**
-* string_nconcat- allocates memory using malloc
+* string_nconcat- concatenates two strings
 * @s1: 1st string
 * @s2: string to concatenate to s1
 * @n: unsigned int
