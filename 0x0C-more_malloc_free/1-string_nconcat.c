@@ -21,37 +21,37 @@ unsigned int len1 = 0;
 unsigned int len2orN = 0;
 
 if (s1 == NULL)
-s1 = "";
+	s1 = "";
 
 if (s2 == NULL)
-s2 = "";
+	s2 = "";
 
 while (s1[i] != '\0')
 {
-len1++;
-i++;
+	len1++;
+	i++;
 }
 
 while (s2[j] != '\0')
 {
-len2orN++;
-j++;
+	len2orN++;
+	j++;
 }
+
 if (len2orN > n)
-len2orN = n;
+	len2orN = n;
+
 newstr = malloc(sizeof(char) * (len1 + len2orN + 1));
 
 if (newstr == NULL)
-return (NULL);
+	return (NULL);
 
 for (i = 0; i < len1; i++)
-newstr[i] = s1[i];
+	newstr[i] = s1[i];
 
 for (j = 0; j < len2orN; j++, i++)
-{
-newstr[i] = s2[j];
-}
+	newstr[i] = s2[j];
 
 newstr[len1 + len2orN] = '\0';
-return (newstr);
+	return (newstr);
 }
