@@ -26,5 +26,6 @@ i = 0;
 while (min <= max)
 array[i++] = min++;
 
-return(array);
+return (array);
 }
+
