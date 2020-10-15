@@ -24,7 +24,7 @@ int _strlen(char *s)
 * @n: unsigned int
 * Return: NULL if function fails. Otherwise,
 * a pointer that points to a newly allocated space
-* in memory taht contains s1 followed by the first n bytes of
+* in memory that contains s1 followed by the first n bytes of
 * s2, and null terminated
 */
 
