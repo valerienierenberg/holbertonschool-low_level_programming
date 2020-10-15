@@ -2,22 +2,6 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
-* _strlen- returns the length of a given string
-* @s: string to find length of
-* Return: length of string
-*/
-
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-/**
 * string_nconcat- concatenates two strings
 * @s1: 1st string
 * @s2: string to concatenate to s1
@@ -31,7 +15,10 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *newstr;
-unsigned int i, j;
+unsigned int i = 0;
+unsigned int j = 0;
+unsigned int len1 = 0;
+unsigned int len2orN = 0;
 
 if (s1 == NULL)
 s1 = "";
@@ -39,22 +26,32 @@ s1 = "";
 if (s2 == NULL)
 s2 = "";
 
-if ((int) n > _strlen(s2))
-n = _strlen(s2);
-
-newstr = malloc(_strlen(s1) + n + 1);
-
-if (newstr == NULL)
-	return (NULL);
-
-for (i = 0, j = 0; s1[i]; i++, j++)
-	newstr[j] = s1[i];
-
-for (i = 0; i != n; i++, j++)
-	newstr[j] = s2[i];
-
-newstr[j] = '\0';
-
-return (newstr);
+while (s1[i] != '\0')
+{
+len1++;
+i++;
 }
 
+while (s2[j] != '\0')
+{
+len2orN++;
+j++;
+}
+if (len2orN > n)
+len2orN = n;
+newstr = malloc(sizeof(char) * (len1 + len2orN + 1));
+
+if (newstr == NULL)
+return (NULL);
+
+for (i = 0; i < len1; i++)
+newstr[i] = s1[i];
+
+for (j = 0; j < len2orN; j++, i++)
+{
+newstr[i] = s2[j];
+}
+
+newstr[len1 + len2orN] = '\0';
+return (newstr);
+}
