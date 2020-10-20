@@ -80,8 +80,6 @@ new_dog->owner = copyowner;
 new_dog->age = age;
 
 
-free(new_dog->name);
-free(new_dog->owner);
 free(new_dog);
 
 return (new_dog);
