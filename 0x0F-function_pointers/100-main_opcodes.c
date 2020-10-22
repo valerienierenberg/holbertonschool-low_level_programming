@@ -20,7 +20,7 @@ printf("Error\n");
 exit(1);
 }
 
-if (argv[2] < 0)
+if (argv[1] < 0)
 {
 printf("Error\n");
 exit(2);
