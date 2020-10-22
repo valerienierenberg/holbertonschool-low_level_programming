@@ -5,11 +5,12 @@
 #include <ctype.h>
 
 /**
+* main- prints op codes of its main function
 *
+* @argc: argument count
+* @argv: argument vector array
 *
-*
-*
-*
+* Return: 0
 */
 int main(int argc, char **argv)
 {
