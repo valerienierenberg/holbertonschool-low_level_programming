@@ -32,6 +32,6 @@ while (i < 5)
 i++;
 }
 
-printf("Error");
+printf("Error\n");
 exit(99);
 }
