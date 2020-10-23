@@ -5,7 +5,7 @@
 #include <stdarg.h>
 
 /**
-* print_numbers- function that prints numbers
+* print_strings- function that prints strings
 * @separator: const char pointer
 * @n: unsigned int
 * Return- void
