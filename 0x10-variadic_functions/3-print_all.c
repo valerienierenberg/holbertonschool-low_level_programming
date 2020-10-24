@@ -41,8 +41,7 @@ default:
 	}
 x++;
 
-if (format[x] == 'c' || format[x] == 'i' || format[x] == 'f'
-|| format[x] == 's')
+if (format[x])
 printf(", ");
 
 }
