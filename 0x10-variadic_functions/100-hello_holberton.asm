@@ -1,10 +1,22 @@
-    org  0x100
+section .text
+    global _start
 
-    mov  dx, msg
-    mov  ah, 9
-    int  0x21
+section .data
+msg db  'Hello, world!',0xa ;our dear string
+len equ $ - msg
 
-    mov  ah, 0x4c
-    int  0x21
+section .text
 
-    msg  db 'Hello, World!', 0x0d, 0x0a, '$'
+_start:
+
+
+    mov edx,len
+    mov ecx,msg
+    mov ebx,1
+    mov eax,4
+    int 0x80
+
+
+    mov ebx,0
+    mov eax,1
+    int 0x80
