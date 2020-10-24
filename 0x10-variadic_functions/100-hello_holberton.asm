@@ -1,11 +1,10 @@
-    global  _main
-    extern  _printf
+    org  0x100
 
-    section .text
-_main:
-    push    message
-    call    _printf
-    add     esp, 4
-    ret
-message:
-    db  'Hello, Holberton', 10, 0
+    mov  dx, msg
+    mov  ah, 9
+    int  0x21
+
+    mov  ah, 0x4c
+    int  0x21
+
+    msg  db 'Hello, World!', 0x0d, 0x0a, '$'
