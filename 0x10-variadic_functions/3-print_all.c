@@ -17,9 +17,10 @@ unsigned int x;
 
 x = 0;
 
+va_start(args, format);
+
 while (format)
 {
-va_start(args, format);
 while (format[x] != '\0')
 {
 switch (format[x])
