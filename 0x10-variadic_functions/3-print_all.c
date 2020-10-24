@@ -43,7 +43,7 @@ default:
 	}
 x++;
 
-if (x > 0 && format[x] != 'e')
+if (format[x] != 'e' && format[x] != '\0')
 printf(", ");
 
 }
