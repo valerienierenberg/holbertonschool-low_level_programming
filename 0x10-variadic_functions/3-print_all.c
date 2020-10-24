@@ -23,6 +23,10 @@ while (format)
 {
 while (format[x] != '\0')
 {
+
+if (x++)
+printf(", ");
+
 switch (format[x])
 {
 case 'c':
@@ -42,9 +46,6 @@ default:
 	}
 x++;
 
-if (format[x] == 'c' || format[x] == 'i' || format[x] == 'f'
-|| format[x] == 's')
-printf(", ");
 
 }
 va_end(args);
