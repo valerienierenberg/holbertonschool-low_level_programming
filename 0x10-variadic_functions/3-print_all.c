@@ -24,9 +24,6 @@ while (format)
 while (format[x] != '\0')
 {
 
-if (x > 0 && format[x] != 'e')
-printf(", ");
-
 switch (format[x])
 {
 case 'c':
@@ -46,6 +43,8 @@ default:
 	}
 x++;
 
+if (x > 0 && format[x] != 'e')
+printf(", ");
 
 }
 va_end(args);
