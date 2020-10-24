@@ -11,7 +11,6 @@
 */
 void print_all(const char * const format, ...)
 {
-
 va_list args;
 unsigned int x = 0;
 int b;
@@ -44,10 +43,8 @@ default:
 	b = 0;
 	break;
 }
-
 if (format[x + 1] && b)
 printf(", ");
-
 x++;
 }
 va_end(args);
