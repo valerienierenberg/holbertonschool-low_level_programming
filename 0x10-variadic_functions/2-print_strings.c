@@ -19,12 +19,12 @@ unsigned int i;
 
 va_start(args, n);
 
+if (args == NULL)
+printf("(nil)\n");
+
 for (i = 0; i < n; i++)
 {
 printf("%s", va_arg(args, char *));
-
-if (args == NULL)
-printf("(nil)\n");
 
 if (separator != NULL)
 {
