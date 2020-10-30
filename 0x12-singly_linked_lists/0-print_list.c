@@ -6,6 +6,7 @@
 *
 * Return: the number of nodes in the list (type size_t)
 */
+
 size_t print_list(const list_t *h)
 {
 	size_t nodecount = 0;
