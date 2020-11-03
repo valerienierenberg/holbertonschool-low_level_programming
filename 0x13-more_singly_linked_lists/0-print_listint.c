@@ -4,8 +4,8 @@
 #include <stdlib.h>
 
 /**
-* print_list- prints all the elements of a list_t list
-* @h: pointer (list of type list_t)
+* print_listint- prints all the elements of a listint_t list
+* @h: pointer (list of type listint_t)
 *
 * Return: the number of nodes in the list (type size_t)
 */
