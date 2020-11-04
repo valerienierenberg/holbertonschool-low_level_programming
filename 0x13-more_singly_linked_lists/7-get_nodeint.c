@@ -18,7 +18,7 @@ unsigned int i;
 
 traverse = head;
 
-while (i < index)
+while (i != index)
 {
 	if (traverse->next == NULL)
 		return (NULL);
