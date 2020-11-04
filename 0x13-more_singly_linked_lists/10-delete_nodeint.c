@@ -50,5 +50,10 @@ return (pop_listint(head));
 if (traverse == NULL)
 return (-1);
 
+while (traverse != NULL)
+{
+free(traverse->next);
+traverse = traverse->next;
 return (1);
+}
 }
