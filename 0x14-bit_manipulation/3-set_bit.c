@@ -4,7 +4,7 @@
 * set_bit- Function that sets the value of a bit to 1 at a given index
 * @n: pointer to bit o set value to 1
 * @index: index of bit
-* 
+*
 * Return: 1 if it worked, -1 if error occurred
 */
 
