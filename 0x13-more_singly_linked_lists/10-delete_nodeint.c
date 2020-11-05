@@ -1,59 +1,38 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
-* pop_listint- deletes the head node of a linked list
-* @head: double pointer
-* Return: n (data)
+* delete_nodeint_at_index - Function that deletes the node at index
+* index of a listint_t linked list.
+* @head: double pointer, pointing to a list
+* @index: unsigned int
+* Return: 1 if it succeeded, -1 if it failed.
 */
-
-int pop_listint(listint_t **head)
-{
-	int n = 0;
-	listint_t *prev;
-
-	if ((*head) == NULL)
-		return (0);
-
-	prev = (*head);
-
-	n = prev->n;
-
-	(*head) = prev->next;
-	free(prev);
-
-	return (n);
-}
-
-/**
-* delete_nodeint_at_index- deletes node at index
-* @head: double pointer
-* @index: index of listint_t list
-* Return: 1 if succeeded, -1 if failed
-*/
-
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-
-listint_t *dup, *traverse = *head;
+listint_t *tmp, *prev;
 unsigned int i = 0;
 
-if (head == NULL)
-return (-1);
+tmp = *head;
 
-if (index == 0)
-return (pop_listint(head));
+	if (tmp != NULL && index == 0)
+	{
+		*head = tmp->next;
+		free(tmp);
+		return (-1);
+	}
+	while (tmp != NULL && index != i)
+	{
+		prev = tmp;
+		tmp = tmp->next;
+		i++;
+	}
+	if (tmp == NULL)
+		return (-1);
 
-if (traverse == NULL)
-return (-1);
+	prev->next = tmp->next;
+	free(tmp);
 
-while (traverse != NULL)
-{
-free(traverse->next);
-traverse = traverse->next;
 return (1);
 }
-}
+
