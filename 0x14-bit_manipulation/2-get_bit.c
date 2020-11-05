@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
-* print_binary- Function that prints the binary representation of a number
-* @n: number to convert to binary
-* 
-* Return: void
+* get_bit- Function that returns the value of a bit at a given index
+* @n: number to get value of bit
+* @index: index of bit
+* Return: value of a bit at given index
 */
 
 int get_bit(unsigned long int n, unsigned int index)
