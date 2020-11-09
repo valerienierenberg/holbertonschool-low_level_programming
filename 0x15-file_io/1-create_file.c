@@ -52,7 +52,7 @@ return (1);
 
 wr = write(fd, text_content, _strlen(text_content));
 
-close (fd);
+close(fd);
 
 if (wr == -1)
 return (-1);
