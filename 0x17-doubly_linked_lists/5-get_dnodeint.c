@@ -6,7 +6,7 @@
 * get_dnodeint_at_index- returns the nth node of a dlistint_t linked list
 * @head: double pointer to beginning of linked list
 * @index: index of the node, starting at 0
-* Return: nth node of a listint_t linked list, or NULL if the node
+* Return: nth node of a dlistint_t linked list, or NULL if the node
 * does not exist
 */
 
