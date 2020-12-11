@@ -18,3 +18,9 @@ size_t print_dlistint(const dlistint_t *h)
 	return (count);
 }
 
+/*
+* for loop iterates through list (until h = NUll)
+* print 'n' of each node
+* set position to next node, continue loop until NULL
+* return number of nodes
+*/
