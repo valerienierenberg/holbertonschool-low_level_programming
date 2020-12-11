@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "lists.h"
+
 /**
 * get_dnodeint_at_index- returns the nth node of a dlistint_t linked list
 * @head: double pointer to beginning of linked list
