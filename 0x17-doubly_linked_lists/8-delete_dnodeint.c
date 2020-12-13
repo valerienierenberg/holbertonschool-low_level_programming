@@ -30,7 +30,7 @@ tmp = *head;
 	if (tmp == NULL)
 		return (-1);
 
-	prev->next = tmp->next;
+	prev->next->prev = tmp->next;
 	free(tmp);
 
 return (1);
