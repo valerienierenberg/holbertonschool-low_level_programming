@@ -27,3 +27,12 @@ int sum_dlistint(dlistint_t *head)
 
 return (sum);
 }
+
+/*
+* declare a copy of list (traverse = head), and 'sum' initialized to 0
+* if the list is empty, return 0
+* while the list exists:
+* 1. add 'n' from each node to the sum
+* 2. set the copy to the next position in order to move through the list
+* return the sum
+*/
