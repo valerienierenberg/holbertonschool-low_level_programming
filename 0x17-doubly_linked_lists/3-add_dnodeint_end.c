@@ -29,15 +29,13 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return ((*head));
 	}
 
-	/* lastnode = (*head); */
-
 	while (lastnode->next != NULL)
 		lastnode = lastnode->next;
 
 	lastnode->next = newnode;
 	newnode->prev = lastnode;
 
-return (lastnode);
+return (newnode);
 }
 
 /*
@@ -48,4 +46,8 @@ return (lastnode);
 * if there's no list yet, set 'prev' pointer of newnode to point to NULL,
 * and set head to be newnode. return the newnode (line 25-29)
 *
+* While loop is to get position of lastnode to one place before end of list
+* Line 35, we are at one from end of the list, we then set 'next' to be newnode
+* set 'prev' pointer of newnode to point to lastnode
+* return lastnode
 */
