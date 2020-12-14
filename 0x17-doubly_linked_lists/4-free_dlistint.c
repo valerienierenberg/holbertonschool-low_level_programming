@@ -9,12 +9,20 @@
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *tmp;
-	dlistint_t *prev = head;
+	dlistint_t *cpy = head;
 
-	while (prev != NULL)
+	while (cpy != NULL)
 	{
-		tmp = prev->next;
-		free(prev);
-		prev = tmp;
+		tmp = cpy->next;
+		free(cpy);
+		cpy = tmp;
 	}
 }
+
+/*
+* declare pointer to list 'tmp', and declare pointer 'cpy' to be copy of head
+* while the list exists:
+* 1. set tmp equal to one node past cpy
+* 2. free cpy
+* 3. move cpy to one down the list (into the position tmp was holding)
+*/
