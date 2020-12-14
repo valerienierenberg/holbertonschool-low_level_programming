@@ -12,8 +12,10 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *newnode;
 	dlistint_t *lastnode;
 
-	if (head == NULL)
-		return (NULL);
+	/*
+	* if (head == NULL)
+	* 	return (NULL);
+	*/
 
 	newnode = (dlistint_t *) malloc(sizeof(dlistint_t));
 
@@ -42,3 +44,11 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 return (lastnode);
 }
+
+/*
+* declare pointer to lastnode, set that equal to head (it's a copy of list)
+* declare pointer to newnode, malloc size for it (check if malloc worked)
+* set 'next' pointer of newnode to point to NULL (line 26)
+* copy 'n' that is passed to function into newnode (line 27)
+* if there is only one node in the list, 
+*/
