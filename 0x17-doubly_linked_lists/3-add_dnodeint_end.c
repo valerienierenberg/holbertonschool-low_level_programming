@@ -47,5 +47,5 @@ return (lastnode);
 * copy 'n' that is passed to function into newnode (line 23)
 * if there's no list yet, set 'prev' pointer of newnode to point to NULL,
 * and set head to be newnode. return the newnode (line 25-29)
-* 
+*
 */
