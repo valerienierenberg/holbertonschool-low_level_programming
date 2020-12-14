@@ -24,3 +24,11 @@ while (i != index)
 
 return (traverse);
 }
+
+/*
+* declare a copy of list (traverse = head)
+* while loop iterates through list until position right before index
+* check if 'next' points to NULL, if it does, means the node @ index is NULL,
+* in which case, return NULL
+* otherwise, set position to that of index (nth node), & return that address
+*/
