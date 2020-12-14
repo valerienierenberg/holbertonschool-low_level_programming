@@ -49,5 +49,5 @@ return (newnode);
 * While loop is to get position of lastnode to one place before end of list
 * Line 35, we are at one from end of the list, we then set 'next' to be newnode
 * set 'prev' pointer of newnode to point to lastnode
-* return lastnode
+* return address of newnode
 */
