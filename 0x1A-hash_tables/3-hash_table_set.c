@@ -11,74 +11,43 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int idx = 0;
-	hash_node_t *new = NULL;
-	hash_node_t *current = NULL;
+	unsigned long int idx;
+	hash_node_t *node;
+	hash_node_t *temp;
 
-	if (ht == NULL || key == NULL || value == NULL || strcmp(key, "") == 0)
+	if (ht == NULL || key == NULL || value == NULL)
+		return (0);
+
+	if (strlen(key) == 0)
 		return (0);
 
 	idx = key_index((unsigned char *)key, ht->size);
-	current = ht->array[idx];
 
-	for (; current != NULL; current = current->next)
-	{
-		if (strcmp(current->key, key) == 0)
-		{
-			if (strcmp(current->value, value) != 0)
-			{
-				free(current->value);
-				current->value = strdup(value);
-			}
-			return (1);
-		}
-	}
-
-	new = make_node(key, value);
-	if (new == NULL)
+	node = malloc(sizeof(hash_node_t *));
+	if (node == NULL)
 		return (0);
-	new->next = ht->array[idx];
-	ht->array[idx] = new;
+
+	node->key = strdup(key);
+	node->value = strdup(value);
+	node->next = NULL;
+
+	if (ht->array[idx] == NULL)
+		ht->array[idx] = node;
+	else
+	{
+		temp = ht->array[idx];
+		while (temp != NULL)
+		{
+			if (strcmp(temp->key, key) == 0)
+			{
+				free(temp->value);
+				temp->value = strdup(value);
+				return (1);
+			}
+			temp = temp->next;
+		}
+		node->next = ht->array[idx];
+		ht->array[idx] = node;
+	}
 	return (1);
-}
-
-/**
- * make_node - helper function that makes a node
- * @key: is the key. key can not be an empty string
- * @value: is the value associated with the key. value must be duplicated...
- * ... in hash table set function, value can be an empty string
- * Return: new node
- */
-
-hash_node_t *make_node(const char *key, const char *value)
-{
-	hash_node_t *new_node;
-
-	if (key == NULL || strcmp(key, "") == 0 || value == NULL)
-		return (NULL);
-
-	new_node = malloc(sizeof(hash_node_t));
-
-	if (new_node == NULL)
-		return (NULL);
-
-	new_node->key = strdup(key);
-
-	if (new_node->key == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	new_node->value = strdup(value);
-
-	if (new_node->value == NULL)
-	{
-		free(new_node->key);
-		free(new_node);
-		return (NULL);
-	}
-
-	new_node->next = NULL;
-	return (new_node);
 }
