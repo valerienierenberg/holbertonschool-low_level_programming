@@ -134,6 +134,42 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
+ * shash_table_print_rev - Function that prints a hash table in reverse.
+ * @ht: is the hash table
+ * Return: none
+ */
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	shash_node_t *node;
+	unsigned long int i = 0;
+	unsigned long int n = 0;
+	unsigned int comma = 0;
+
+	if (ht == NULL)
+		return;
+
+	printf("{");
+	for (i = n; i < ht->size; i++)
+	{
+		if (ht->array[i] != NULL)
+		{
+			node = ht->array[i];
+			while (node)
+			{
+				if (comma)
+					printf(", ");
+				printf("'%s': '%s'", node->key, node->value);
+				node = node->next;
+				comma = 1;
+			}
+		}
+	}
+	printf("}");
+	printf("\n");
+}
+
+
+/**
 * shash_table_delete - Function that deletes a hash table
 * @ht: is the hash table to be deleted
 * Return: void
