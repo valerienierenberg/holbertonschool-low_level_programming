@@ -42,6 +42,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
+/**
+ * make_node - helper function that makes a node
+ * @key: is the key. key can not be an empty string
+ * @value: is the value associated with the key. value must be duplicated...
+ * ... in hash table set function, value can be an empty string
+ * Return: new node
+ */
+
 hash_node_t *make_node(const char *key, const char *value)
 {
 	hash_node_t *new_node;
