@@ -51,3 +51,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	return (1);
 }
+
+/*
+ * if hash table, key, or value are equal to NULL, return 0
+ * if key is an empty string, return 0
+ * set idx variable equal to the key at which to add the new element to...
+ * ...the hash table (using key_index function from task 2)
+ * malloc space for our new node (called node) the size of hash_node_t struct
+ * (check if malloc worked, if not return 0)
+ * line 30-33: set the key, value, and next pointer of our new node
+ * if ht->array[idx] == NULL (meaning there is no value existing at the index
+ * we want at this time), go ahead and set that value equal to our new node
+ * else:
+ * set a temporary node equal to ht->array[idx]
+ * while that temp node exists, if temp's key is equal to key passed to us,
+ * free temp->value, set temp->value == value passed to us, and return 1
+ * set temp = temp->next to move it along the array
+ * outside of that while loop of temp existing,
+ * set node->next = ht->array[idx], and then ht->array[idx] = node;
+ * return 1
+ */

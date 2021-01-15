@@ -15,3 +15,10 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 
 	return (hash_djb2(key) % size);
 }
+
+/*
+ * if key is NULL (or does not exist) or size is equal to 0, return 0
+ * otherwise, return the index of the key you are given.
+ * (to do this, the hash_djb function is run on the key and that result is...
+ * modded by the size of the array of the hash table)
+ */
