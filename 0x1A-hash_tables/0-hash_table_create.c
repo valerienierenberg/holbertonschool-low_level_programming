@@ -23,3 +23,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	return (newhashtable);
 }
+/*
+ * declare hash table variable to create
+ * if size of hash table is 0, return NULL
+ * malloc size for our new hash table
+ * (check if malloc worked; if not, return NULL)
+ * set the size of our newhashtable equal to the size passed to us in function
+ * malloc space (size of a hash node struct) for the array of our newhashtable
+ * (check if that malloc worked; if not, return NULL)
+ * return newhashtable
+ */
