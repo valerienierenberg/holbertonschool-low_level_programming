@@ -4,7 +4,8 @@ SRC = holberton.c main.c
 OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 RM= rm -f
-
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
@@ -16,9 +17,3 @@ fclean:
 	$(RM) $(OBJ)
 re:
 	$(CC) $(OBJ) -o $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(SRC) -o $(NAME)
-
-%.o: %.c m.h
-	$(CC) -c -o $@ $<
