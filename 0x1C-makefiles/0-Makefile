@@ -1,0 +1,7 @@
+# builds an executable named holberton from holberton.c and main.c
+all: holberton.c main.c
+	gcc main.c holberton.c -o holberton
+
+# all: holberton
+# holberton: holberton.o
+#	  gcc holberton.c main.c -o holberton

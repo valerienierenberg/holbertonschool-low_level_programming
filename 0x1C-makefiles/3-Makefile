@@ -1,0 +1,19 @@
+# builds an executable named holberton from holberton.c and main.c
+CC = gcc
+SRC = holberton.c main.c
+OBJ = $(SRC:%.c=%.o)
+NAME = holberton
+RM= rm -f
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+clean:
+	$(RM) *~ $(NAME)
+oclean:
+	$(RM) $(OBJ)
+fclean:
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
+re:
+	$(CC) $(OBJ) -o $(NAME)
