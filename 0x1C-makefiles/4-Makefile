@@ -6,17 +6,13 @@ NAME = holberton
 RM= rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+%.o: %.c m.h
+	$(CC) $(CFLAGS) -c -o $@ $<
 all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
 oclean:
 	$(RM) $(OBJ)
-fclean:
-	$(RM) *~ $(NAME)
-	$(RM) $(OBJ)
-re:
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-
-%.o: %.c m.h
-	$(CC) -c $< -o $@
+fclean: clean oclean
+re: oclean all
