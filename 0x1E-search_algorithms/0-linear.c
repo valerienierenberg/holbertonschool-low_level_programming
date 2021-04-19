@@ -1,7 +1,8 @@
 #include "search_algos.h"
 
 /**
-* linear_search- adds a new node at the beginning of a listint_t list
+* linear_search-  searches for a value in an array of integers using
+* the Linear search algorithm
 * @array: integer array
 * @size: pointer to the first element of the integer array to search
 * @value: value to search for

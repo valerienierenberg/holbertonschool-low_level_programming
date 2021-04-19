@@ -24,7 +24,8 @@ void pretty_print(int start, int end, int *array)
 
 
 /**
-* binary_search- adds a new node at the beginning of a listint_t list
+* binary_search- searches for a value in a sorted array of integers using
+* the Binary search algorithm
 * @array: integer array
 * @size: pointer to the first element of the integer array to search
 * @value: value to search for
