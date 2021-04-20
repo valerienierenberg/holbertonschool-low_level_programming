@@ -22,7 +22,6 @@ void pretty_print(int start, int end, int *array)
 }
 
 
-
 /**
 * advanced_binary- searches for a value in a sorted array of integers using
 * the Binary search algorithm
@@ -36,16 +35,22 @@ void pretty_print(int start, int end, int *array)
 
 int advanced_binary(int *array, size_t size, int value)
 {
-    int mid = size / 2;
+	size_t mid = size / 2;
 
-    if (array == NULL)
-        return (-1);
-    if (size == 0)
-        return (-1);
-    if (array[mid] > value)
-	    return advanced_binary(array, mid, value);
-    else if (array[mid] < value)
-	    return (mid + advanced_binary(&array[mid], ((size + 1) / 2), value));
-    else
-	    return (mid);
+	if (array == NULL)
+		return (-1);
+	if (size == 0)
+		return (-1);
+	if (array[mid] > value)
+	{
+		pretty_print(mid, size, array);
+		return (advanced_binary(array, mid, value));
+	}
+	else if (array[mid] < value)
+	{
+		return (mid + advanced_binary(&array[mid], ((size + 1) / 2), value));
+	}
+	else
+		pretty_print(mid, size, array);
+		return (mid);
 }
